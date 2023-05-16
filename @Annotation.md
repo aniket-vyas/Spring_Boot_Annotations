@@ -61,7 +61,25 @@ public class Student {
 }
 ```
 
+# @Test
 
+- It is an annotation of junit which helps us to run the methods & also check the code inside methods , if any code fails it will report a faliure.
+- It works only on non-static methods.
+- No object , No method calling , No main() method
+
+            # junit is a Unit Testing (White Box Testing) framework --> testing which is done at code level 
+
+```java
+import org.junit.*;
+public class Student {
+
+  @Test
+  public void test() {
+    System.Out.Println(" from test() ");
+  }
+
+}
+```
 
 
 
