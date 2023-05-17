@@ -81,9 +81,40 @@ public class Student {
 }
 ```
 
+# @Before
 
+- It will run before every test() method
+- It works only on non-static methods.
 
+```java
+import org.junit.*;
+public class Student {
 
+  @Test
+  public void test1() {
+    System.Out.Println(" from test() - 1 ");
+  }
+  
+  @Test
+  public void test2() {
+    System.Out.Println(" from test() - 2 ");
+  }
+  
+  @Before
+  public void test3() {
+    System.Out.Println(" from before() ");
+  }
+  
+}
+
+```
+
+    # OUTPUT :-
+
+     from before()
+     from test() - 1
+     from before()
+     from test() - 2
 
 
 
