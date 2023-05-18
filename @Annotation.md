@@ -117,8 +117,46 @@ public class Student {
      from test() - 2
 
 
+# @After
 
+- It will run after every test() method.
+- It works only on non-static method.
 
+```java
+import org.junit.*;
+public class Student {
+
+  @Test
+  public void test1() {
+    System.Out.Println(" from test() - 1 ");
+  }
+  
+  @Test
+  public void test2() {
+    System.Out.Println(" from test() - 2 ");
+  }
+  
+  @Before
+  public void test3() {
+    System.Out.Println(" from before() ");
+  }
+  
+  @After
+  public void test4() {
+    System.Out.Println(" from after() ");
+  }
+  
+}
+```
+
+    # OUTPUT :-
+
+     from before()
+     from test() - 1
+     from after()
+     from before()
+     from test() - 2
+     from after()
 
 
 
