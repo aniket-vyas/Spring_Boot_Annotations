@@ -75,7 +75,7 @@ public class Student {
 
   @Test
   public void test() {
-    System.Out.Println(" from test() ");
+    System.Out.Println(" from test ");
   }
 
 }
@@ -92,17 +92,17 @@ public class Student {
 
   @Test
   public void test1() {
-    System.Out.Println(" from test() - 1 ");
+    System.Out.Println(" from test - 1 ");
   }
   
   @Test
   public void test2() {
-    System.Out.Println(" from test() - 2 ");
+    System.Out.Println(" from test - 2 ");
   }
   
   @Before
   public void test3() {
-    System.Out.Println(" from before() ");
+    System.Out.Println(" from before ");
   }
   
 }
@@ -111,10 +111,10 @@ public class Student {
 
     # OUTPUT :-
 
-     from before()
-     from test() - 1
-     from before()
-     from test() - 2
+     from before
+     from test - 1
+     from before
+     from test - 2
 
 
 # @After
@@ -128,22 +128,22 @@ public class Student {
 
   @Test
   public void test1() {
-    System.Out.Println(" from test() - 1 ");
+    System.Out.Println(" from test - 1 ");
   }
   
   @Test
   public void test2() {
-    System.Out.Println(" from test() - 2 ");
+    System.Out.Println(" from test - 2 ");
   }
   
   @Before
   public void test3() {
-    System.Out.Println(" from before() ");
+    System.Out.Println(" from before ");
   }
   
   @After
   public void test4() {
-    System.Out.Println(" from after() ");
+    System.Out.Println(" from after ");
   }
   
 }
@@ -151,15 +151,59 @@ public class Student {
 
     # OUTPUT :-
 
-     from before()
-     from test() - 1
-     from after()
-     from before()
-     from test() - 2
-     from after()
+     from before
+     from test - 1
+     from after
+     from before
+     from test - 2
+     from after
 
 
+# @BeforeClass
 
+- It will applied only on static method.
+- It will run only once.
+- It will run before all methods.
 
+```java
+import org.junit.*;
+public class Student {
 
+  @Test
+  public void test1() {
+    System.Out.Println(" from test - 1 ");
+  }
+  
+  @Test
+  public void test2() {
+    System.Out.Println(" from test - 2 ");
+  }
+  
+  @Before
+  public void test3() {
+    System.Out.Println(" from before ");
+  }
+  
+  @After
+  public void test4() {
+    System.Out.Println(" from after ");
+  }
+  
+  @BeforeClass
+  public static void test5() {
+    System.Out.Println(" from BeforeClass ");
+  }
+  
+}
+```
+
+    # OUTPUT :-
+
+     from BeforeClass
+     from before
+     from test - 1
+     from after
+     from before
+     from test - 2
+     from after
 
