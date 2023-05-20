@@ -207,3 +207,57 @@ public class Student {
      from test - 2
      from after
 
+
+# @AfterClass
+
+- It will applied only on static method.
+- It will run only once.
+- It will run after all methods.
+
+```java
+import org.junit.*;
+public class Student {
+
+  @Test
+  public void test1() {
+    System.Out.Println(" from test - 1 ");
+  }
+  
+  @Test
+  public void test2() {
+    System.Out.Println(" from test - 2 ");
+  }
+  
+  @Before
+  public void test3() {
+    System.Out.Println(" from before ");
+  }
+  
+  @After
+  public void test4() {
+    System.Out.Println(" from after ");
+  }
+  
+  @BeforeClass
+  public static void test5() {
+    System.Out.Println(" from BeforeClass ");
+  }
+  
+  @AfterClass
+  public static void test6() {
+    System.Out.Println(" from AfterClass ");
+  }
+  
+}
+```
+
+    # OUTPUT :-
+
+     from BeforeClass
+     from before
+     from test - 1
+     from after
+     from before
+     from test - 2
+     from after
+     from AfterClass
