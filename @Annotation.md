@@ -65,7 +65,7 @@ public class Student {
 
 - It is an annotation of junit which helps us to run the methods & also check the code inside methods , if any code fails it will report a faliure.
 - It works only on non-static methods.
-- No object , No method calling , No main() method
+- No object , No method calling , No main() method.
 
             # junit is a Unit Testing (White Box Testing) framework --> testing which is done at code level 
 
@@ -83,7 +83,7 @@ public class Student {
 
 # @Before
 
-- It will run before every test() method
+- It will run before every test() method.
 - It works only on non-static methods.
 
 ```java
