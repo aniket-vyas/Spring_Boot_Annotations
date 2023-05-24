@@ -43,6 +43,20 @@ public class Student {
 }
 ```
 
+# @Table
+
+- Specifies the name of the database table to be used for mapping.
+
+```java
+@Entity
+@Table(name = "EMPLOYEE")
+public class Employee {
+   @Id 
+   @GeneratedValue
+   private int id;
+}
+```
+
 # @Autowired
 
 - Acts like "new" keyword for creating bean (object).
