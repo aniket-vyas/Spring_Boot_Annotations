@@ -57,6 +57,21 @@ public class Employee {
 }
 ```
 
+# @Column
+
+- It is used to specify the mapped column for a persistent property or field.
+
+```java
+@Entity
+@Table(name = "EMPLOYEE")
+public class Employee {
+   @Id
+   @GeneratedValue
+   @Column(name = "id")
+   private int id;
+}
+```
+
 # @Autowired
 
 - Acts like "new" keyword for creating bean (object).
