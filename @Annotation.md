@@ -290,3 +290,8 @@ public class Student {
      from test - 2
      from after
      from AfterClass
+
+# @Component
+
+-
+-
