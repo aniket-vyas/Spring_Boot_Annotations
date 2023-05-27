@@ -293,5 +293,17 @@ public class Student {
 
 # @Component
 
--
--
+- It allows Spring to detect our custom beans automatically.
+- In other words, without having to write any explicit code, Spring will scan our application for classes annotated with @Component.
+- Inject them wherever needed
+
+```java
+@Component
+class ComponentDemo{
+    public String getValue() {
+        return "Hello World";
+    } 
+}
+```
+
+    # Spring Container will automatically create and manage the spring bean for the above class because it is annotated with @Component annotation.
